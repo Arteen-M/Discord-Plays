@@ -86,5 +86,5 @@ async def on_message(message):
         return
 
 
-client.run('OTI1ODMwNjM4OTg3MjY0MDIw.Ycy0-Q.5uXdI8TzCPLHwgb7UDplNw6sZus')
+client.run('TOKEN')
 
