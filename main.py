@@ -86,5 +86,5 @@ async def on_message(message):
         return
 
 
-client.run('TOKEN')
+client.run('TOKEN') # BOTS TOKEN IN STRING FORMAT
 
