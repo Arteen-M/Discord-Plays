@@ -1,5 +1,4 @@
 import discord
-import os
 from pynput.keyboard import Key, Controller
 import time
 
@@ -30,6 +29,7 @@ async def on_message(message):
         if start_game:
             if message.content == '!end':
                 start_game = False
+                print("Ending Game")
                 await message.channel.send('Ending')
                 return
         else:
@@ -38,35 +38,27 @@ async def on_message(message):
 
     if start_game:
         if message.content.lower() == "right":
-            time.sleep(1)
             keyboard.press(Key.right)
         if message.content.lower() == "left":
-            time.sleep(1)
             keyboard.press(Key.left)
         if message.content.lower() == "up":
-            time.sleep(1)
             keyboard.press(Key.up)
         if message.content.lower() == "down":
-            time.sleep(1)
             keyboard.press(Key.down)
 
         if message.content.lower() == "a":
-            time.sleep(1)
             keyboard.press(Key.space)
             time.sleep(0.1)
             keyboard.release(Key.space)
         if message.content.lower() == "b":
-            time.sleep(1)
             keyboard.press(Key.tab)
             time.sleep(0.1)
             keyboard.release(Key.tab)
         if message.content.lower() == "x":
-            time.sleep(1)
             keyboard.press(Key.insert)
             time.sleep(0.1)
             keyboard.release(Key.insert)
         if message.content.lower() == "y":
-            time.sleep(1)
             keyboard.press(Key.backspace)
             time.sleep(0.1)
             keyboard.release(Key.backspace)
@@ -86,5 +78,5 @@ async def on_message(message):
         return
 
 
-client.run('TOKEN') # BOTS TOKEN IN STRING FORMAT
+client.run('TOKEN') # BOTS TOKEN
 
