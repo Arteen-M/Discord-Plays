@@ -6,6 +6,7 @@ keyboard = Controller()
 
 client = discord.Client()
 start_game = False
+TOKEN = "" # PUT TOKEN HERE
 
 
 @client.event
@@ -78,5 +79,5 @@ async def on_message(message):
         return
 
 
-client.run('TOKEN') # BOTS TOKEN
+client.run(TOKEN)
 
