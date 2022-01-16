@@ -6,6 +6,7 @@ keyboard = Controller()
 
 client = discord.Client()
 start_game = False
+TOKEN = "" # PUT TOKEN HERE
 
 @client.event
 async def on_ready():
@@ -134,4 +135,4 @@ async def on_message(message):
         await message.channel.send("Game not Started bruh")
         return
 
-client.run("OTI1ODMwNjM4OTg3MjY0MDIw.Ycy0-Q.iIPEvOmfcRL6FxTqe8h0-BroknY")
+client.run(TOKEN)
